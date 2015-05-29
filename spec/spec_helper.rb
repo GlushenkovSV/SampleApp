@@ -35,6 +35,7 @@ Spork.prefork do
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
     config.raise_errors_for_deprecations!
+    config.include Rails.application.routes.url_helpers #Для того что бы работали именованные маршруты в спеках
 
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, remove the following line or assign false
